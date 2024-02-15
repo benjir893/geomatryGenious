@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlogPage</title>
+</head>
+<body>
+    <div class="commentContainer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus libero ipsa consequuntur distinctio totam doloremque reiciendis suscipit aliquam, dicta incidunt animi labore consectetur blanditiis aliquid natus sapiente, tenetur quia dolorem a excepturi voluptatum magnam at accusantium! Dolorem, similique voluptatem.</p>
+        <p>Harum exercitationem perspiciatis, eius nihil dolorem doloremque recusandae necessitatibus ex ducimus dolore libero, eum modi. Modi in necessitatibus omnis cumque porro blanditiis. Sapiente possimus mollitia voluptatibus omnis eaque! Esse molestias laudantium illo nisi adipisci possimus quas repudiandae magni sunt aut.</p>
+        <p>Impedit ad amet fugit ab molestiae minima nulla doloremque id qui nemo beatae exercitationem eos laborum culpa inventore ipsum eius vero minus totam animi ipsam, hic odio at! Suscipit, dolores! Unde atque tempora, hic dignissimos quia quod cupiditate consequuntur fugit!</p>
+    </div>
+    <div class="">
+        <textarea name="" id="posts" cols="30" rows="10"></textarea><br>
+        <button id="postbtn" class="">Post</button>
+    </div>
+    <script>
+        document.getElementById('postbtn').addEventListener('click', function(){
+            const getText = document.getElementById('posts');
+            const setText = getText.value ;
+
+            const Container = document.getElementById('commentContainer');
+            const p = document.createElement('p');
+            p.innerText = setText;
+            Container.appendChild(p);
+            getText.value = '';
+        })
+    </script>
+</body>
+</html>
